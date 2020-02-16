@@ -6,10 +6,10 @@ class UsersController < Clearance::UsersController
     end
 
     def new
-        
     end
 
     def create
+        byebug
     end
 
     def edit
