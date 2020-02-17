@@ -58,6 +58,6 @@ gem "clearance"
 # Protecting your privacy with Figaro
 gem "figaro"
 
-#For google Authentication
-gem 'omniauth'
-gem 'omniauth-google-oauth2'
+#For google Login
+# gem 'omniauth'
+# gem 'omniauth-google-oauth2', '~> 0.8.0'

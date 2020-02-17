@@ -4,9 +4,9 @@ class User < ApplicationRecord
 
   def self.create_with_auth_and_hash(authentication, auth_hash)
     user = self.create!(
-      byebug
-      first_name: auth_hash["info"]["name"],
-      email: auth_hash["info"]["email"]
+      first_name: auth_hash["info"]["first_name"],
+      last_name: auth_hash["info"]["last_name"],
+      email: auth_hash["info"]["email"],
       password: SecureRandom.hex(10)
     )
     user.authentications << authentication
@@ -18,6 +18,5 @@ class User < ApplicationRecord
     x = self.authentications.find_by(provider: 'google_oauth2')
     return x.token unless x.nil?
   end
- end
  
 end
