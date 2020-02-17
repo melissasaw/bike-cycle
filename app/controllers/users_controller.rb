@@ -1,5 +1,7 @@
 class UsersController < Clearance::UsersController
 
+  before_action :require_login, only: [:index,:show]
+  
     def index
         @AllUser= User.all
     end
@@ -27,8 +29,8 @@ class UsersController < Clearance::UsersController
     end
 
     def edit
-      @user=current_user
       #this one is a GET, takes to edit form     
+      @user=current_user
     end
 
     def update

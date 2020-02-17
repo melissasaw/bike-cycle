@@ -54,3 +54,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "clearance"
+
+# Protecting your privacy with Figaro
+gem "figaro"
